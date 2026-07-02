@@ -1146,7 +1146,7 @@ Preparing file...
 const SHOW_PG_2026 = true;
 const SHOW_PROFESSIONAL_2026 = false;
 
-const API_URL = "http://localhost:3000/search";
+const API_URL = "https://cbpg-result-server.vercel.app/search";
 
 let resultLink = "";
 const YEAR_WISE_SEMESTERS = {
@@ -1252,7 +1252,7 @@ if (examType === "BACKPAPER") {
 }
 
 const response = await fetch(
-    "http://localhost:3000/download?url=" +
+    "https://cbpg-result-server.vercel.app/download?url=" +
     encodeURIComponent(resultLink) +
     "&filename=" +
     encodeURIComponent(fileName)
