@@ -53,6 +53,7 @@ router.get("/search", async (req, res) => {
     const year = String(req.query.year || "").trim();
 
     const students = loader.getStudents();
+    console.log("Total Students :", students.length);
 
     for (let i = 0; i < students.length; i++) {
 
