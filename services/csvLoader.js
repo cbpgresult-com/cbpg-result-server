@@ -27,8 +27,14 @@ function loadCSV(callback) {
 
         .on("data", (row) => {
 
-            students.push(row);
+           const roll = String(row["Roll No"] || "").trim();
 
+// Sirf valid numeric roll wale records load karo
+if (!/^\d+$/.test(roll)) {
+    return;
+}
+
+students.push(row);
         })
 
         .on("end", () => {
